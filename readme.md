@@ -12,7 +12,9 @@ npm install
 ### 1.3 Create `token.json` with Google Workspace Credentials
 See `credentials.json.example` file for example
 
-### 1.4 Create `.env` file based on `.env.template` file, you shoudl set `CALENDAR_ID` with "primary" or a Google Calendar ID
+### 1.4 Create `.env` file based on `.env.template` file, 
+
+### 1.5 Set `CALENDAR_ID` environment variablo on `.env` with "primary" or a Google Calendar ID
 
 ## 2. Setting up Launchd Service(Mac Only)
 ### 2.1 Create `com.schedule-edealert.daemon.plist` file based on `com.schedule-edealert.daemon.plist.example` file
