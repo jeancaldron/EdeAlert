@@ -2,6 +2,8 @@ import { readFile, writeFile } from "fs";
 import { createInterface } from "readline";
 import { google } from "googleapis";
 
+const CALENDAR_ID = String(process.env['CALENDAR_ID']);
+
 const SCOPES = [
 	"https://www.googleapis.com/auth/calendar",
 	"https://www.googleapis.com/auth/calendar.events",
@@ -70,7 +72,7 @@ function listEvents(auth) {
 	const calendar = google.calendar({ version: "v3", auth });
 	calendar.events.list(
 		{
-			calendarId: "mbriv38l1eiailglvj172un7js@group.calendar.google.com",
+			calendarId: CALENDAR_ID,
 			timeMin: new Date().toISOString(),
 			maxResults: 10,
 			singleEvents: true,
@@ -102,7 +104,7 @@ function insertEvent(auth, event) {
 	calendar.events.insert(
 		{
 			auth: auth,
-			calendarId: "mbriv38l1eiailglvj172un7js@group.calendar.google.com",
+			calendarId: CALENDAR_ID,
 			resource: event,
 		},
 		function (err, event) {

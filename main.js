@@ -15,7 +15,7 @@ const events = renacimientoEvents.concat(cacicazgosEvents);
 const pendingEvents = excludeSyncedEvents(events,lastSync);
 
 pendingEvents.forEach((event) => {
-	// createEvent(event);
+	createEvent(event);
 });
 
 setSyncEvent(maintenances[maintenances.length - 1].date);

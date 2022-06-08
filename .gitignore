@@ -138,3 +138,5 @@ package-lock.json
 daemon/
 
 .vscode/
+
+last_run.json
