@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+
+        <key>Label</key>
+        <string>com.edealert.daemon.plist</string>
+
+        <key>RunAtLoad</key>
+        <true/>
+
+        <key>StartCalendarInterval</key>
+        <dict>
+            <key>Minute</key>
+            <integer>30</integer>
+            <key>Hour</key>
+            <integer>19</integer>
+            <key>Weekday</key>
+            <integer>2</integer>
+        </dict>
+
+        <key>StandardErrorPath</key>
+        <string>daemon/stderr.log</string>
+
+        <key>StandardOutPath</key>
+        <string>daemon/stdout.log</string>
+
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string><![CDATA[/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin]]></string>
+        </dict>
+
+        <key>WorkingDirectory</key>
+        <!-- Example working directory route -->
+        <!-- <string>/Users/juan.perez/Downloads/EdeAlert</string> -->
+        <string>{WorkingDirectory}</string>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>/usr/local/bin/node</string>
+            <string>main.js</string>
+        </array>
+
+    </dict>
+</plist>
