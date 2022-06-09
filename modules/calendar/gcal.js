@@ -1,6 +1,8 @@
 import { readFile, writeFile } from "fs";
 import { createInterface } from "readline";
 import { google } from "googleapis";
+import dotenv from 'dotenv'
+dotenv.config()
 
 const CALENDAR_ID = String(process.env['CALENDAR_ID']);
 
