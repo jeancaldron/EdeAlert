@@ -19,3 +19,4 @@ pendingEvents.forEach((event) => {
 });
 
 setSyncEvent(maintenances[maintenances.length - 1].date);
+console.log("Done!");
