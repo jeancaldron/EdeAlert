@@ -12,6 +12,7 @@
   "dependencies": {
     "@googleapis/docs": "^0.4.1",
     "cheerio": "^1.0.0-rc.11",
+    "dotenv": "^16.0.1",
     "googleapis": "^100.0.0",
     "node-fetch": "^3.2.5"
   }
